@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Rummo penne rigate 66",
+    "description": "Le penne rigate Rummo garantiscono una eccezionale tenuta alla cottura grazie al loro tradizionale metodo di lavorazione. Perfette per preparare deliziosi primi piatti. Su Cicalia.com è disponibile la confezione da 500 gr.",
+    "quantity": 50,
+    "price": 1.5
+  },
+  {
+    "id": 2,
+    "name": "Garofalo bucatini 14",
+    "description": "Assomigliano a dei grossi spaghetti ma hanno un foro centrale, tipico della pasta corta, i Bucatini Garofalo hanno una struttura di grande personalità.\nQuesta pasta lunga di Gragnano IGP trafilata al bronzo abbina il sapore e il colore del grano a condimenti forti e semplici come cacio e pepe, carbonara e la tradizionale amatriciana.",
+    "quantity": 200,
+    "price": 2.5
+  }
+]

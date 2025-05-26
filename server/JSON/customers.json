@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Confapi",
+    "address": "Via della Colonna Antonina 52",
+    "vatNumber": "13478631008"
+  },
+  {
+    "id": 2,
+    "name": "Maury's",
+    "address": "Viale Regina Margherita 42",
+    "vatNumber": "12170391002"
+  },
+  {
+    "id": 3,
+    "name": "Edil Rocchi",
+    "address": "Via Filippo Ermini 68",
+    "vatNumber": "05945661006"
+  }
+]

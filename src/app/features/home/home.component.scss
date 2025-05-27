@@ -1,18 +1,17 @@
 .stylingCard {
   background-color: #034078;
   color: #FEFCFB;
-  width: auto;
+  width: 20rem;
   height: 20rem;
-  transition:  box-shadow  500ms ease-in-out, color 200ms ease-in-out;
+  transition:  background-color 200ms ease-in-out, color 200ms ease-in-out;
   
   &:hover{
-    box-shadow:  1px 1px 10px 10px rgba(10, 17, 40, 0.8);
-    cursor: pointer;
+    background-color: #001F54;
+    
   }
   &:active{
     color: #9bb9ff;
-    box-shadow: inset 1px 1px 15px 15px rgba(10, 17, 40, 0.8);
-    cursor: pointer;
+    background-color: #0A1128;
   }
 
 }

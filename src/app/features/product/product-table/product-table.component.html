@@ -1,0 +1,54 @@
+<!-- <ul>
+  @for(product of products$ | async; track product.id){
+  <li>{{product.name}}</li>
+  <li>{{product.description}}</li>
+  <li>{{product.quantity}}</li>
+  <li>{{product.price | currency :'EUR'}}</li>
+  }
+</ul> -->
+
+  <div class="row mt-5">
+    <div class="col">
+      <table class="table table-secondary table-bordered border-primary table-striped table-responsive">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Quantità</th>
+            <th>Prezzo</th>
+            <th colspan="2" class="text-center">Azioni</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(product of products$ | async; track product.id){
+          <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price | currency :'EUR'}}</td>
+            <td>
+              <button class="btn btn-dark">
+                <i class="bi bi-pen-fill"></i>
+              </button>
+            </td>
+            <td>
+              <button 
+                class="btn btn-dark" 
+                type="button" 
+                (click)="onDeleteProduct(product.id)"
+                ><i class="bi bi-trash3"></i>
+              </button>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row justify-content-start">
+    <div class="col-1"> <button class="btn btn-dark"
+      (click)="toBackHomePage()">
+      <i class="bi bi-house-fill"></i>
+    </button>
+    </div>
+  </div>

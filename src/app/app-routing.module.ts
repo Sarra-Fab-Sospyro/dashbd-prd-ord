@@ -10,19 +10,19 @@ const routes: Routes = [
   },
   {
     path: 'orderForm',
-    loadChildren: () => import('./features/order-form/order-form.module').then(m => m.OrderFormModule)
+    loadChildren: () => import('./features/order/order-form/order-form.module').then(m => m.OrderFormModule)
   },
   {
     path: 'orderTable',
-    loadChildren: () => import('./features/order-table/order-table.module').then(m => m.OrderTableModule)
+    loadChildren: () => import('./features/order/order-table/order-table.module').then(m => m.OrderTableModule)
   },
   {
     path: 'productForm',
-    loadChildren: () => import('./features/product-form/product-form.module').then(m => m.ProductFormModule)
+    loadChildren: () => import('./features/product/product-form/product-form.module').then(m => m.ProductFormModule)
   },
   {
     path: 'productTable',
-    loadChildren: () => import('./features/product-table/product-table.module').then(m => m.ProductTableModule)
+    loadChildren: () => import('./features/product/product-table/product-table.module').then(m => m.ProductTableModule)
   },
   {
     path: 'NOT-FOUND',

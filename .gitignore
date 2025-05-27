@@ -1,21 +1,47 @@
-# Angular
+# Angular 19 specific
 /.angular/
 /dist/
 /tmp/
 /out-tsc/
+/bazel-out/
+
+# Vite/esbuild generated files
+*.tsbuildinfo
+chunk-*.js
+chunk-*.js.map
+*angular*.js
+*angular*.js.map
+*.mjs
+*.cjs
 
 # Node
 /node_modules/
 npm-debug.log
 yarn-error.log
 
-# Build
-*.tsbuildinfo
-
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Build outputs
+build/

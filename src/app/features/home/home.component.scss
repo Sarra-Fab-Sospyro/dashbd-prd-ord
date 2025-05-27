@@ -1,17 +1,19 @@
+@use '../../../variables.scss' as myVar;
+
 .stylingCard {
-  background-color: #034078;
-  color: #FEFCFB;
+  background-color: myVar.$myPaletteAzul;
+  color: myVar.$myPaletteWhite;
   width: 20rem;
   height: 20rem;
   transition:  background-color 200ms ease-in-out, color 200ms ease-in-out;
   
   &:hover{
-    background-color: #001F54;
+    background-color: myVar.$myPaletteBlue;
     
   }
   &:active{
-    color: #9bb9ff;
-    background-color: #0A1128;
+    color: myVar.$myPaletteGrey;
+    background-color: myVar.$myPaletteDarkBlue;
   }
 
 }

@@ -1,9 +1,11 @@
+# ───────────────
 # Angular build outputs
+# ───────────────
 /.angular/
-/dist/
-/tmp/
-/out-tsc/
-/bazel-out/
+dist/
+tmp/
+out-tsc/
+bazel-out/
 
 # Vite/Esbuild generated files (Angular 19)
 *.tsbuildinfo
@@ -16,18 +18,34 @@ polyfills-*.js
 main-*.js
 styles-*.css
 
-# Node
+# ───────────────
+# Node (root + server)
+# ───────────────
 /node_modules/
-npm-debug.log
-yarn-error.log
+server/node_modules/
 
-# Logs
+# ───────────────
+# Server config & logs
+# ───────────────
+server/.env
+server/.env.local
+server/logs/
 *.log
 
-# IDE
+# ───────────────
+# OS specific files
+# ───────────────
+.DS_Store
+Thumbs.db
+
+# ───────────────
+# IDE/editor
+# ───────────────
 .vscode/
 .idea/
 
-# OS
-.DS_Store
-Thumbs.db
+# ───────────────
+# Miscellaneous
+# ───────────────
+npm-debug.log
+yarn-error.log

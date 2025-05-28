@@ -1,20 +1,25 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
-import { Observable, tap } from 'rxjs';
+import { debounceTime, Observable, tap } from 'rxjs';
 import { IProduct } from '../../models/iproduct';
 import { Router } from '@angular/router';
+import { LoadingService } from '../../../core/services/loading.service';
+import { SpinnerComponent } from '../../../core/spinner/spinner.component';
 
 @Component({
   selector: 'cem-product-table',
   standalone: false,
   templateUrl: './product-table.component.html',
-  styleUrl: './product-table.component.scss'
+  styleUrl: './product-table.component.scss',
 })
 export class ProductTableComponent implements OnInit {
 
-  protected products$: Observable<IProduct[]>;
-  private _productService = inject(ProductService);
+  loadingService = inject(LoadingService);
   
+  protected products$: Observable<IProduct[]>;
+  protected products: IProduct[];
+  private _productService = inject(ProductService);
+
   private _router = inject(Router);
 
   constructor() {
@@ -23,14 +28,15 @@ export class ProductTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.products$ = this._productService.getAllProducts().pipe(
-      tap(product => console.log(product)))
+      tap(prod=> console.log(prod))
+    )
   }
 
-  onDeleteProduct(id:number){
+  onDeleteProduct(id: number) {
     this._productService.deleteProduct(id);
   }
 
-  toBackHomePage(){
+  toBackHomePage() {
     this._router.navigate(['/home']);
   }
 

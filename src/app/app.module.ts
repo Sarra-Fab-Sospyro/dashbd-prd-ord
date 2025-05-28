@@ -8,17 +8,19 @@ import { NotFoundPageComponent } from './core/not-found-page/not-found-page.comp
 import { APP_CONFIG_TOKEN, IhttpConfig } from './core/environment/environment';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { environmentInterceptor } from './core/interceptors/environment.interceptor';
-
+import { SpinnerComponent } from './core/spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    SpinnerComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     provideHttpClient(
@@ -30,6 +32,7 @@ import { environmentInterceptor } from './core/interceptors/environment.intercep
         apiUrl: 'http://localhost:3000'
       } as IhttpConfig
     }],
+    exports:[],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

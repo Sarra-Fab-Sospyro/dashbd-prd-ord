@@ -11,7 +11,7 @@ import { ProductTableComponent } from './product-table.component';
   ],
   imports: [
     CommonModule,
-    ProductTableRoutingModule
+    ProductTableRoutingModule,
   ]
 })
 export class ProductTableModule { }

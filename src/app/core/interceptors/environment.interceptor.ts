@@ -12,7 +12,7 @@ export const environmentInterceptor: HttpInterceptorFn = (req, next) => {
   const reqModified = req.clone({ url: prefix.apiUrl + req.url })
 
   return next(reqModified).pipe(
-    // delay(3000),
+    delay(3000),
 
     finalize(() => serviceSpinner.endSpinner())
   );
